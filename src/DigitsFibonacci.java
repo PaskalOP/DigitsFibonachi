@@ -3,6 +3,9 @@ import java.util.Map;
 
 public class DigitsFibonacci {
     private Map<Integer, Long> hesh = new HashMap<>();
+
+    //Time Complexity O(n)
+    //Space Complexity O(n)
     public int fibonachiIteration(int n){
         int [] digits = new int[n];
         if(n<=0) throw  new IllegalArgumentException("Введите положительное число");
@@ -22,6 +25,8 @@ public class DigitsFibonacci {
             return digits[i-1];
         }
     }
+    //Time Complexity O(2^n)
+    //Space Complexity O(1)
     public  int fibonachiRecursion(int n){
         if(n<=0) throw  new IllegalArgumentException("Введите положительное число");
         if(n==1) return 0;
@@ -30,6 +35,8 @@ public class DigitsFibonacci {
         }
         return fibonachiRecursion(n-1)+fibonachiRecursion(n-2);
     }
+    //Time Complexity O(n)
+    //Space Complexity O(n)
     public  long fibonachiDP(int n){
         if(n<=0) throw  new IllegalArgumentException("Введите положительное число");
         if(n==1) return 0;
