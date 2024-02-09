@@ -25,7 +25,7 @@ public class DigitsFibonacci {
             return digits[i-1];
         }
     }
-    //Time Complexity O(2^n)
+    //Time Complexity O(n^2)
     //Space Complexity O(1)
     public  int fibonachiRecursion(int n){
         if(n<=0) throw  new IllegalArgumentException("Введите положительное число");
